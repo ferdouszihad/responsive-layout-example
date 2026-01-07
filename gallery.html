@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 3px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 150px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .big-layout {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+
+        .normal-layout {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .wide-layout {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .small-layout {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        @media screen and (max-width:576px) {
+            .container {
+                display: grid;
+                gap: 3px;
+                grid-template-columns: repeat(2, 1fr);
+                /* grid-template-rows: repeat(6, 150px); */
+            }
+
+            .normal-layout,
+            .big-layout,
+            .small-layout,
+            .wide-layout {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="big-layout">
+            <img src="images/A.jpg" alt="">
+        </div>
+        <div class="normal-layout">
+            <img src="images/B.jpg" alt="">
+        </div>
+        <div class="normal-layout">
+            <img src="images/C.jpg" alt="">
+        </div>
+        <div class="wide-layout">
+            <img src="images/D.jpg" alt="">
+        </div>
+        <div class="wide-layout">
+            <img src="images/E.jpg" alt="">
+        </div>
+        <div class="normal-layout">
+            <img src="images/F.jpg" alt="">
+        </div>
+        <div class="small-layout">
+            <img src="images/G.jpg" alt="">
+        </div>
+        <div class="small-layout">
+            <img src="images/G.jpg" alt="">
+        </div>
+
+        <div class="normal-layout">
+            <img src="images/I.jpg" alt="">
+        </div>
+        <div class="small-layout">
+            <img src="images/G.jpg" alt="">
+        </div>
+        <div class="small-layout">
+            <img src="images/G.jpg" alt="">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
